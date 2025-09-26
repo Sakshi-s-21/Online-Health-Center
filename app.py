@@ -373,8 +373,8 @@ app.secret_key = "your_secret_key"
 # ---------------------------
 
 # ######### local db
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.db"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.db"
+# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 
 ## # Render Database Add
@@ -385,11 +385,11 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # # # Neon Database add
 
 
-# app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL2")
-# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-# app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
-#     "connect_args": {"sslmode": "require"}
-# }
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "connect_args": {"sslmode": "require"}
+}
 
 
 # # ########
