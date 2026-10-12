@@ -311,7 +311,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 # Configure the Ai prediction functions
 model = genai.GenerativeModel(
-    model_name="gemini-2.0-flash-lite",
+    model_name="gemini-3.8-flash",
     system_instruction="""
     You are a professional AI doctor.
 The user will give you their name, age, gender, and symptoms.
@@ -341,7 +341,7 @@ client = ge.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 chat = client.chats.create(
-    model="gemini-2.0-flash-lite",
+    model="gemini-3.8-flash",
     history=[
         {
             "role": "user",
